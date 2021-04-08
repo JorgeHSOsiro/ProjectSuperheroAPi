@@ -4,7 +4,7 @@ const URL = 'https://akabab.github.io/superhero-api/api/all.json';
 
 const searchByAttr = async (req, res) => {
     try {
-        const { q } = req.body;
+        const { q } = req.query;
         if ( q.length < 3 ) {
             throw new Error("Sua busca deve conter mais que três caracteres");
         }
